@@ -1,0 +1,26 @@
+{% extends 'portdjango/base.html' %}
+{% load static %}
+{% block content %}
+<main id='main'>
+<h1>Modifier une compétence</h1>
+{% comment %} <form method="post" action="{% url 'skill_update' skill.id %}">
+    {% csrf_token %}
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" value="{{ skill.name }}" required><br>
+    <label for="percent">Pourcentage :</label>
+    <input type="number" id="percent" name="percent" value="{{ skill.percent }}" required><br>
+    <input type="submit" value="Modifier">
+</form> {% endcomment %}
+<main id='main'>
+    <form method='POST'>
+        {% csrf_token %}
+        {{skill}}
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" value="{{ skill.name }}" required><br>
+        <label for="percent">Pourcentage :</label>
+        <input type="number" id="percent" name="percent" value="{{ skill.percent }}" required><br>
+        <button type="submit">Update</button>
+    </form>
+</main>
+</main>
+{% endblock content %}

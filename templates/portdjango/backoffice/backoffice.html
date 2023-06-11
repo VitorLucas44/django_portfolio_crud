@@ -1,0 +1,15 @@
+{% extends 'portdjango/base.html' %}
+{% load static %}
+{% block content %}
+<!-- about.html -->
+<main id="main">
+    <a href={% url 'e_about' %}>update about</a>
+    <a href={% url 'skill_list' %}>update skills</a>
+    <a href={% url 'contact' %}>update Contact</a>
+    <a href={% url 'services' %}>update services</a>
+    <a href={% url 'testimonials' %}>update Testimonials</a>
+</main>
+
+{% endblock content %}
+
+

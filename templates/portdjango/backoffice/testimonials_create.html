@@ -1,0 +1,14 @@
+{% extends 'portdjango/base.html' %}
+{% load static %}
+{% block content %}
+<main id ='main'>
+    <div class='form_about' >
+    <form method='POST' class='box_about'>
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">create</button>
+    </form>
+    </div>
+</main>
+
+{% endblock content %}

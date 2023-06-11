@@ -1,0 +1,15 @@
+{% extends 'portdjango/base.html' %}
+{% load static %}
+{% block content %}
+<main id='main'>
+<h1>Ajouter une compétence</h1>
+<form method="post" action="{% url 'skill_create' %}">
+    {% csrf_token %}
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="percent">Pourcentage :</label>
+    <input type="number" id="percent" name="percent" required><br>
+    <input type="submit" value="Ajouter">
+</form>
+</main>
+{% endblock content %}

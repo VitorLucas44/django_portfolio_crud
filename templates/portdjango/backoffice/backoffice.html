@@ -3,11 +3,53 @@
 {% block content %}
 <!-- about.html -->
 <main id="main">
-    <a href={% url 'e_about' %}>update about</a>
-    <a href={% url 'skill_list' %}>update skills</a>
-    <a href={% url 'contact' %}>update Contact</a>
-    <a href={% url 'services' %}>update services</a>
-    <a href={% url 'testimonials' %}>update Testimonials</a>
+    <div class="row">
+        <div class="col-sm-3 mt-5 p-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Section About</h5>
+              <p class="card-text">Back Office</p>
+              <a href={% url 'e_about' %} class="btn btn-primary">Edit</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-5 p-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Section Skills</h5>
+              <p class="card-text">Back Office</p>
+              <a href={% url 'skill_list' %} class="btn btn-primary">Edit</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-5 p-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Section Contact</h5>
+                <p class="card-text">Back Office</p>
+                <a href={% url 'contact' %} class="btn btn-primary">Edit</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mt-5 p-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Secton services</h5>
+                <p class="card-text">Back Office</p>
+                <a href={% url 'services' %} class="btn btn-primary">Edit</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mt-5 p-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Section testimonials</h5>
+                <p class="card-text">Back Office</p>
+                <a href={% url 'testimonials' %} class="btn btn-primary">Edit</a>
+              </div>
+            </div>
+          </div>
+      </div>
 </main>
 
 {% endblock content %}
